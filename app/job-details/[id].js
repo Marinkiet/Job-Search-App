@@ -14,6 +14,7 @@ const JobDetails = () => {
   })
 
   const [refreshing, setRefreshing] = useState(false);
+
   const onRefresh = useCallback(() => {
     setRefreshing(true);
     refetch()
@@ -103,7 +104,6 @@ const JobDetails = () => {
           </View>
         )}
       </ScrollView>
-
       <JobFooter url={data[0]?.job_google_link ?? 'https://careers.google.com/jobs/results/'} />
 
     </SafeAreaView>
